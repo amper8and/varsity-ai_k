@@ -19,7 +19,10 @@ export function SplashScreen() {
           <span className="text-5xl font-bold text-unizik-500">Z</span>
         </div>
         <h1 className="mt-6 text-2xl font-bold text-white">UNIZIK Connect</h1>
-        <p className="mt-2 text-white/70">Powered by MTN + AIM</p>
+        <p className="mt-2 text-white/70 text-center leading-relaxed">
+          Brought to you by<br />
+          African Innovative Markets
+        </p>
         
         <div className="mt-8 flex gap-1.5">
           <span className="w-2 h-2 bg-white rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
