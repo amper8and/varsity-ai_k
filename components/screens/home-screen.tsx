@@ -2,7 +2,7 @@
 
 import { useApp } from '@/contexts/app-context'
 import { IMAGES } from '@/lib/images'
-import { Search, Bell, Heart } from 'lucide-react'
+import { Search, Bell, Heart, BookOpen, Home, Coffee, Stethoscope, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export function HomeScreen() {
@@ -77,6 +77,51 @@ export function HomeScreen() {
             image={IMAGES.tech}
             label="Tech"
             onClick={() => setCurrentScreen('deals')}
+          />
+        </div>
+      </div>
+      
+      {/* Campus Guide */}
+      <div className="px-5 mt-5">
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="font-semibold text-gray-800">Campus Guide</h3>
+          <button 
+            onClick={() => setCurrentScreen('services')}
+            className="text-unizik-500 text-sm flex items-center gap-1"
+          >
+            View all
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
+        
+        <div className="grid grid-cols-2 gap-3">
+          <CampusCard 
+            image={IMAGES.library}
+            icon={BookOpen}
+            label="Library"
+            subtitle="Study & Research"
+            onClick={() => setCurrentScreen('services')}
+          />
+          <CampusCard 
+            image={IMAGES.hostel}
+            icon={Home}
+            label="Housing"
+            subtitle="Accommodation"
+            onClick={() => setCurrentScreen('services')}
+          />
+          <CampusCard 
+            image={IMAGES.cafeteria}
+            icon={Coffee}
+            label="Dining"
+            subtitle="Food & Drinks"
+            onClick={() => setCurrentScreen('services')}
+          />
+          <CampusCard 
+            image={IMAGES.campus}
+            icon={Stethoscope}
+            label="Health"
+            subtitle="Medical Center"
+            onClick={() => setCurrentScreen('services')}
           />
         </div>
       </div>
@@ -204,6 +249,30 @@ export function HomeScreen() {
         </div>
       </div>
     </div>
+  )
+}
+
+function CampusCard({ image, icon: Icon, label, subtitle, onClick }: { 
+  image: string
+  icon: typeof BookOpen
+  label: string
+  subtitle: string
+  onClick: () => void 
+}) {
+  return (
+    <button onClick={onClick} className="relative h-28 rounded-2xl overflow-hidden">
+      <img src={image} alt={label} className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+      <div className="absolute top-3 left-3">
+        <div className="w-10 h-10 bg-white/20 backdrop-blur rounded-xl flex items-center justify-center">
+          <Icon className="w-5 h-5 text-white" />
+        </div>
+      </div>
+      <div className="absolute bottom-3 left-3">
+        <p className="text-white font-semibold text-sm">{label}</p>
+        <p className="text-white/70 text-xs">{subtitle}</p>
+      </div>
+    </button>
   )
 }
 
