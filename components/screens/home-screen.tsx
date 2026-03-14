@@ -17,7 +17,7 @@ export function HomeScreen() {
       <div className="relative">
         <div className="absolute inset-0">
           <img 
-            src={IMAGES.heroBanner} 
+            src={IMAGES.campus} 
             alt="Campus" 
             className="w-full h-48 object-cover"
           />

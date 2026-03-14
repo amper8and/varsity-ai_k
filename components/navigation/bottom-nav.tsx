@@ -13,8 +13,8 @@ interface BottomNavProps {
 export function BottomNav({ currentScreen, onNavigate }: BottomNavProps) {
   const navItems: { id: ScreenType; icon: typeof Home }[] = [
     { id: 'home', icon: Home },
-    { id: 'deals', icon: Tag },
     { id: 'services', icon: Building2 },
+    { id: 'deals', icon: Tag },
     { id: 'profile', icon: User },
   ]
 
