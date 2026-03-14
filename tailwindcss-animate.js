@@ -1,0 +1,20 @@
+module.exports = require('tailwindcss/plugin')(
+  function ({ addUtilities }) {
+    addUtilities({
+      '@keyframes accordion-down': {
+        from: { height: '0' },
+        to: { height: 'var(--radix-accordion-content-height)' },
+      },
+      '@keyframes accordion-up': {
+        from: { height: 'var(--radix-accordion-content-height)' },
+        to: { height: '0' },
+      },
+      '.animate-accordion-down': {
+        animation: 'accordion-down 0.2s ease-out',
+      },
+      '.animate-accordion-up': {
+        animation: 'accordion-up 0.2s ease-out',
+      },
+    })
+  }
+)
