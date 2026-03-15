@@ -2,6 +2,7 @@
 
 import { useApp } from '@/contexts/app-context'
 import { IMAGES } from '@/lib/images'
+import { NextClassCard } from '@/components/next-class-card'
 import { Search, Bell, Heart, BookOpen, Home, Coffee, Stethoscope, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -43,6 +44,11 @@ export function HomeScreen() {
             </button>
           </div>
           
+          {/* Next Class Reminder */}
+          <div className="mb-4">
+            <NextClassCard onClick={() => setCurrentScreen('services')} />
+          </div>
+
           {/* Search */}
           <div className="relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
