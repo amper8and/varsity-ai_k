@@ -121,7 +121,7 @@ export function AIScreen() {
       )}
       
       {/* Input */}
-      <div className="p-5 bg-white border-t">
+      <div className="p-5 pb-24 bg-white border-t">
         <div className="flex items-center gap-3 bg-gray-100 rounded-full px-5 py-3">
           <input
             type="text"
