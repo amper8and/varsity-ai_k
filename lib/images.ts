@@ -6,7 +6,7 @@ export const IMAGES = {
   userAvatar: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=200&h=200&fit=crop&crop=face',
   
   // Deal Partners
-  chickenRepublic: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop',
+  chickenRepublic: '/images/chicken-republic.png',
   mtn: 'https://images.unsplash.com/photo-1616348436168-de43ad0db179?w=400&h=300&fit=crop',
   jumia: 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&h=300&fit=crop',
   bolt: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400&h=300&fit=crop',
